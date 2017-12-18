@@ -1,0 +1,68 @@
+{% extends "app/layout.html" %}
+{% block content %}
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'app/content/series.css' %}" />
+    <script src="{% static 'app/scripts/jquery-1.10.2.js' %}"></script>
+    
+<!--
+    No Image image link:    
+        http://epaper.gujaratimidday.com/images/no_image_thumb.gif
+    
+    Guardians of The Galaxy 2 poster link:
+        http://i.annihil.us/u/prod/marvel/html_pages_assets/gotg2-premiere/images/master_gotg2-b3de7b1c93.jpg
+-->
+
+<img src="http://i.annihil.us/u/prod/marvel/html_pages_assets/gotg2-premiere/images/master_gotg2-b3de7b1c93.jpg" style="float:left; max-height:350px; max-width:150px; margin:5px; margin-right:15px;" />
+<button id="recButton" class="defaultRecButton">Recommend</button><button id="dislikeButton" class="defaultDislikeButton">Do not recommend</button>
+<h1>{{ title }}</h1>
+<h4>
+    Seasons: {{ season_count }} | Episodes: {{ episode_count }} <br /><br />
+    Recommendations: <span style="color:limegreen;">{{num_recs}}</span> | Dislikes: <span style="color:red;">{{num_dislikes}}</span>
+</h4>
+
+<p> <strong>Synopsis: </strong> <br /> {{ synopsis }}</p>
+
+<script>
+
+    recommended = false;
+    disliked = false;
+
+    $("#recButton").click(function ()
+    {
+        disliked = (!recommended) ? false : disliked;
+        recommended = !recommended;
+        updateButtons();
+    });
+
+    $("#dislikeButton").click(function ()
+    {
+        recommended = (!disliked) ? false : recommended;
+        disliked = !disliked;
+        updateButtons();
+    });
+
+
+    function updateButtons() {
+        if (recommended) {
+            $("#recButton").attr('class', "recommended");
+            $("#recButton").html("&#x2713; Recommended");
+        } else
+        {
+            $("#recButton").attr('class', "defaultRecButton");
+            $("#recButton").html("Recommend");
+        }
+
+        if (disliked) {
+            $("#dislikeButton").attr('class', "disliked");
+            $("#dislikeButton").html("X Do not recommend");
+        } else
+        {
+            $("#dislikeButton").attr('class', "defaultDislikeButton");
+            $("#dislikeButton").html("Do not recommend");
+        }
+
+    }
+
+</script>
+
+{% endblock %}

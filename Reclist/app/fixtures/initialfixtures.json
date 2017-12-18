@@ -1,0 +1,42 @@
+[
+    {
+        "model": "app.series",
+        "pk": 1,
+        "fields":{
+            "title":"Stranger Things",
+            "season_count":2,
+            "episode_count":19,
+            "image_source":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjUwMDgzOTg3Nl5BMl5BanBnXkFtZTgwNTI4MDk5MzI@._V1_SY1000_CR0,0,669,1000_AL_.jpg"
+        }
+    },
+    {
+        "model": "app.series",
+        "pk": 2,
+        "fields":{
+            "title":"Big Mouth",
+            "season_count":1,
+            "episode_count":10,
+            "image_source":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTcyNTk0ODgzOF5BMl5BanBnXkFtZTgwMzM0NjIzMzI@._V1_SY1000_CR0,0,673,1000_AL_.jpg"
+        }
+    },
+    {
+        "model": "app.series",
+        "pk": 3,
+        "fields":{
+            "title":"American Vandal",
+            "season_count":1,
+            "episode_count":8,
+            "image_source":"https://images-na.ssl-images-amazon.com/images/M/MV5BZTQ2Mjg2M2MtNTExNi00MTgxLTk3MTYtOTI4ZDRmM2JkNWQ4XkEyXkFqcGdeQXVyNzIyMTA4MjA@._V1_SY1000_CR0,0,659,1000_AL_.jpg"
+        }
+    },
+    {
+        "model": "app.series",
+        "pk": 4,
+        "fields":{
+            "title":"Big Mouth",
+            "season_count":1,
+            "episode_count":10,
+            "image_source":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTcyNTk0ODgzOF5BMl5BanBnXkFtZTgwMzM0NjIzMzI@._V1_SY1000_CR0,0,673,1000_AL_.jpg"
+        }
+    }
+]
